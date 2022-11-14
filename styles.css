@@ -1,0 +1,172 @@
+:root {
+    --min-width: 200px;
+    --max-width: 200px;
+    --foreground-main: #555;
+    --foreground-light: #eee;
+    --foreground-highlight: steelblue;
+    --button-size: 24px;
+    --padding: 0.2rem;
+    --margin: 2px;
+}
+
+* {
+    font-family: 'roboto', Arial, Helvetica, sans-serif;    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 0;
+    
+}
+
+html {
+    overflow: auto;
+}
+
+
+.app-container {
+    height:  100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    position: relative;
+
+
+}
+
+.header {
+    align-self: flex-start;
+    width: 100%;
+    min-width: var(--min-width);
+    padding: 10px;
+    overflow: hidden;
+    height: fit-content;
+    flex-grow: 0;
+}
+
+.viewer-window{
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    align-self: center;
+    float:  left;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+       
+}
+
+.title  {  
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    position:relative;
+    width: auto;
+}
+
+.title-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    z-index: -1;
+}
+
+.button {
+    position: relative;
+    padding-top: var(--padding);
+    margin: var(--margin);
+    width: var(--button-size);
+    height: var(--button-size);
+    font-size: 10px;
+}
+
+.icon {
+    width: 100%;
+}
+
+.button .tooltip {
+    visibility: hidden;
+    width:  max-content;
+    padding: var(--padding);
+    margin: var(--margin);
+    background-color: var(--foreground-main);
+    opacity: 75%;
+    color: var(--foreground-light);
+    text-align: center;
+    float: none;
+    border-radius: var(--margin);
+    display: inline-block;
+    z-index: 10;
+    position: relative;
+    bottom: 225%;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.button:hover .tooltip {
+    visibility: visible;
+}
+
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 100vh;
+    max-width: fit-content;
+}
+
+.image-container {
+    width: 33vw;
+    height: min-content;
+    position: relative;
+}
+
+.item {
+    width: 100%;
+    padding: var(--margin);
+    padding-bottom: 0;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.image-container:hover .item{
+    filter:none;
+    border-radius: 0.5rem;
+    padding: 0;
+    
+}
+
+.project-tag {
+    position: absolute;
+    align-self: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 400;
+    
+    margin: 0;
+    padding: 0;
+    
+    width: fit-content;
+    visibility: hidden;
+    text-decoration: none;
+    color: var(--foreground-light);
+    text-shadow: -1px -1px 0 var(--foreground-main), 
+    1px -1px 0 var(--foreground-main),
+    -1px 1px 0 var(--foreground-main),
+    1px 1px 0 var(--foreground-main);
+    
+    
+}
+
+.image-container:hover .project-tag{
+    visibility: visible;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Viewer</title>
+</head>
+
+<body class="app-container">
+
+    <div class="header">
+        <div class="title">
+            <div> IFC Model Viewer </div>
+            <div> model.ifc </div>
+            <div class="title-buttons">
+                <div class="button"> <a href="./index.html"> <img class="icon" src="./resources/icon_home.png"
+                            alt="Model Gallery"></a> </div>
+            </div>
+
+        </div>
+        <div class="toolbar">
+            <button class="button first" id="button-open"> |/
+                <div class="tooltip"> Open an IFC Model from disk</div>
+            </button>
+            <button class="button" id="button-open-url"> URL
+                <div class="tooltip"> Open an IFC Model from URL </div>
+            </button>
+            <button class="button" id="button-measure">M_<div class="tooltip"> Measure </div>
+            </button>
+            <button class="button" id="button-snapshot"> [o]
+                <div class="tooltip"> Take a Snapshot </div>
+            </button>
+            <button class="button" id="button-share"> ->
+                <div class="tooltip"> Share the model </div>
+            </button>
+        </div>
+    </div>
+
+    
+
+    <iframe class="viewer-window" id="box-3" src="https://ifcjs.github.io/ifcjs-crash-course/exercises/WIV/hello-world/"
+        frameborder="0"></iframe>
+
+    
+
+</body>
+
+</html>

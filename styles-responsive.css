@@ -1,0 +1,10 @@
+@media (max-width: 600px){
+    .image-gallery {
+        flex: 1 1 100vw;
+        flex-direction: row;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
